@@ -1,0 +1,4 @@
+!.gitignore 
+!*.sv
+modelsim.ini
+vsim.wlf
