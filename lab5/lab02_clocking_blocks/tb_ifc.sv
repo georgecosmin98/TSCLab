@@ -14,7 +14,7 @@ interface tb_ifc (input logic clk);
   import instr_register_pkg::*;
 
   // ADD CODE TO DECLARE THE INTERFACE SIGNALS
-  logic          load_en;
+  logic          load_en; 
   logic          reset_n;
   opcode_t       opcode;
   operand_t      operand_a, operand_b;
@@ -22,7 +22,7 @@ interface tb_ifc (input logic clk);
   instruction_t  instruction_word;
 
   // ADD CODE TO DEFINE A CLOCKING BLOCK WITH INPUT AND OUTPUT SKEWS
-  clocking cb @(clk); //declare cb
+  clocking cb @(posedge clk); //declare cb
     output load_en;
     output reset_n;
     output opcode;
