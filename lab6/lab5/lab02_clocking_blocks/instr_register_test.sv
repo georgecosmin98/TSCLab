@@ -38,8 +38,8 @@ module instr_register_test (tb_ifc io);  // interface port
       opcode<=7;
       opcode>=0;
     }
-
-    function void print_transaction();
+    //Virtual => functia poate fi suprascrisa
+    virtual function void print_transaction();
         $display("Writing to register location %0d: ", write_pointer);
         $display("  opcode = %0d (%s)", opcode, opcode.name);
         $display("  operand_a = %0d",   operand_a);
@@ -55,13 +55,23 @@ module instr_register_test (tb_ifc io);  // interface port
     endtask
   endclass
   
+  class transaction_ext extends transaction;
+
+    virtual function void print_transaction();
+      $display("Sunt in clasa extinsa!");
+      super.print_transaction();
+    endfunction
+  endclass
+
   class Driver;
     virtual tb_ifc vifc;
     transaction trans;
+    transaction_ext trans_ext;
 
     function new (virtual tb_ifc vifc);
       this.vifc = vifc;
       trans=new();
+      trans_ext=new();
     endfunction  
 
     task reset_signals();
@@ -103,6 +113,13 @@ module instr_register_test (tb_ifc io);  // interface port
        assign_signals();
 	     @(vifc.cb)trans.print_transaction();
        end
+       trans=trans_ext;
+       repeat (3) begin
+       //Load
+       @(vifc.cb)trans.randomize();
+       assign_signals();
+	     @(vifc.cb)trans.print_transaction();
+       end
        @( vifc.cb) vifc.cb.load_en <= 1'b0;  // turn-off writing to register
     endtask
 
@@ -118,7 +135,7 @@ module instr_register_test (tb_ifc io);  // interface port
      // read back and display same three register locations
      task read_results();
         $display("\nReading back the same register locations written...");
-        for (int i=0; i<=2; i++) begin
+        for (int i=0; i<=5; i++) begin
         // A later lab will replace this loop with iterating through a
         // scoreboard to determine which address were written and the
         // expected values to be read back
