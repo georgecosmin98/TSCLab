@@ -1,0 +1,186 @@
+# Reading C:/modeltech64_10.6d/tcl/vsim/pref.tcl
+# //  ModelSim SE-64 10.6d Feb 24 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do run.do
+# 1
+# Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+# Start time: 17:37:37 on Apr 15,2021
+# vlog -reportprogress 300 -sv -timescale 1ps/1ps -work work -f sources.txt 
+# -- Compiling package instr_register_pkg
+# -- Compiling module instr_register
+# -- Importing package instr_register_pkg
+# -- Compiling interface tb_ifc
+# -- Compiling module instr_register_test
+# ** Warning: ../lab02_clocking_blocks/instr_register_test.sv(148): (vlog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ../lab02_clocking_blocks/instr_register_test.sv(149): (vlog-2240) Treating stand-alone use of function 'assign_signals' as an implicit VOID cast.
+# ** Warning: ../lab02_clocking_blocks/instr_register_test.sv(156): (vlog-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ../lab02_clocking_blocks/instr_register_test.sv(157): (vlog-2240) Treating stand-alone use of function 'assign_signals' as an implicit VOID cast.
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 17:37:37 on Apr 15,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 4
+# vsim -novopt -quiet -nocoverage "+notimingchecks" "+nowarnTSCALE" -sva top 
+# Start time: 17:37:37 on Apr 15,2021
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Refreshing C:/Users/ylyho/OneDrive/Desktop/TSC_Lab/lab5/sim/work.top
+# Refreshing C:/Users/ylyho/OneDrive/Desktop/TSC_Lab/lab5/sim/work.instr_register_pkg
+# Refreshing C:/Users/ylyho/OneDrive/Desktop/TSC_Lab/lab5/sim/work.tb_ifc
+# Refreshing C:/Users/ylyho/OneDrive/Desktop/TSC_Lab/lab5/sim/work.instr_register_test
+# Refreshing C:/Users/ylyho/OneDrive/Desktop/TSC_Lab/lab5/sim/work.instr_register
+# ** Warning: (vsim-8441) ../lab02_clocking_blocks/instr_register_test.sv(73): Clocking block output #parent#.vifc.cb.opcode is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Instance: /top/test File: ../lab02_clocking_blocks/instr_register_test.sv
+# ** Warning: (vsim-8441) ../lab02_clocking_blocks/instr_register_test.sv(84): Clocking block output #parent#.vifc.cb.operand_a is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Instance: /top/test File: ../lab02_clocking_blocks/instr_register_test.sv
+# ** Warning: (vsim-8441) ../lab02_clocking_blocks/instr_register_test.sv(88): Clocking block output #parent#.vifc.cb.operand_b is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Instance: /top/test File: ../lab02_clocking_blocks/instr_register_test.sv
+# ** Warning: (vsim-8441) ../lab02_clocking_blocks/instr_register_test.sv(73): Clocking block output #parent#.vifc.cb.opcode is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Instance: /top/test File: ../lab02_clocking_blocks/instr_register_test.sv
+# ** Warning: (vsim-8441) ../lab02_clocking_blocks/instr_register_test.sv(84): Clocking block output #parent#.vifc.cb.operand_a is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Instance: /top/test File: ../lab02_clocking_blocks/instr_register_test.sv
+# ** Warning: (vsim-8441) ../lab02_clocking_blocks/instr_register_test.sv(88): Clocking block output #parent#.vifc.cb.operand_b is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Instance: /top/test File: ../lab02_clocking_blocks/instr_register_test.sv
+# ** Warning: (vsim-8441) ../lab02_clocking_blocks/instr_register_test.sv(84): Clocking block output #parent#.vifc.cb.operand_a is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Instance: /top/test File: ../lab02_clocking_blocks/instr_register_test.sv
+# ** Warning: (vsim-8441) ../lab02_clocking_blocks/instr_register_test.sv(88): Clocking block output #parent#.vifc.cb.operand_b is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Instance: /top/test File: ../lab02_clocking_blocks/instr_register_test.sv
+# ** Warning: (vsim-8441) ../lab02_clocking_blocks/instr_register_test.sv(84): Clocking block output #parent#.vifc.cb.operand_a is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Instance: /top/test File: ../lab02_clocking_blocks/instr_register_test.sv
+# ** Warning: (vsim-8441) ../lab02_clocking_blocks/instr_register_test.sv(73): Clocking block output #parent#.vifc.cb.opcode is not legal in this
+# or another expression.
+#    Time: 0 ns  Iteration: 0  Instance: /top/test File: ../lab02_clocking_blocks/instr_register_test.sv
+# 
+# 
+# ***********************************************************
+# ***  THIS IS NOT A SELF-CHECKING TESTBENCH (YET).  YOU  ***
+# ***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES     ***
+# ***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION  ***
+# ***********************************************************
+# 
+# Reseting the instruction register...
+# 
+# Writing values to register stack...
+# 
+# Writing values to register stack...
+# Writing to register location x: 
+#   opcode = 6 (DIV)
+#   operand_a = -12
+#   operand_b = 7
+# 
+# Writing to register location x: 
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# 
+# Writing to register location x: 
+#   opcode = 6 (DIV)
+#   operand_a = 14
+#   operand_b = 1
+# 
+# Writing to register location x: 
+#   opcode = 6 (DIV)
+#   operand_a = 14
+#   operand_b = 10
+# 
+# Writing to register location x: 
+#   opcode = 6 (DIV)
+#   operand_a = 7
+#   operand_b = 4
+# 
+# Sunt in clasa extinsa!
+# Writing to register location x: 
+#   opcode = 5 (MULT)
+#   operand_a = -3
+#   operand_b = 10
+# 
+# Sunt in clasa extinsa!
+# Writing to register location x: 
+#   opcode = 7 (MOD)
+#   operand_a = 15
+#   operand_b = 11
+# 
+# Sunt in clasa extinsa!
+# Writing to register location x: 
+#   opcode = 4 (SUB)
+#   operand_a = -13
+#   operand_b = 14
+# 
+# Sunt in clasa extinsa!
+# Writing to register location x: 
+#   opcode = 3 (ADD)
+#   operand_a = 11
+#   operand_b = 6
+# 
+# Sunt in clasa extinsa!
+# Writing to register location x: 
+#   opcode = 4 (SUB)
+#   operand_a = -6
+#   operand_b = 1
+# 
+# 
+# Reading back the same register locations written...
+# Read from register location 0: 
+#   opcode = 6 (DIV)
+#   operand_a = -12
+#   operand_b = 7
+# 
+# Read from register location 1: 
+#   opcode = 4 (SUB)
+#   operand_a = -8
+#   operand_b = 13
+# 
+# Read from register location 2: 
+#   opcode = 6 (DIV)
+#   operand_a = 14
+#   operand_b = 1
+# 
+# Read from register location 3: 
+#   opcode = 6 (DIV)
+#   operand_a = 14
+#   operand_b = 10
+# 
+# Read from register location 4: 
+#   opcode = 6 (DIV)
+#   operand_a = 7
+#   operand_b = 4
+# 
+# Read from register location 5: 
+#   opcode = 5 (MULT)
+#   operand_a = -3
+#   operand_b = 10
+# 
+# 
+# ***********************************************************
+# ***  THIS IS NOT A SELF-CHECKING TESTBENCH (YET).  YOU  ***
+# ***  NEED TO VISUALLY VERIFY THAT THE OUTPUT VALUES     ***
+# ***  MATCH THE INPUT VALUES FOR EACH REGISTER LOCATION  ***
+# ***********************************************************
+# 
+# ** Note: $finish    : ../lab02_clocking_blocks/instr_register_test.sv(189)
+#    Time: 375 ns  Iteration: 2  Instance: /top/test
+# 1
+# Break in Task instr_register_test/Monitor::read_results at ../lab02_clocking_blocks/instr_register_test.sv line 189
+# Simulation Breakpoint: 1
+# Break in Task instr_register_test/Monitor::read_results at ../lab02_clocking_blocks/instr_register_test.sv line 189
+# MACRO ./run.do PAUSED at line 45

@@ -86,7 +86,7 @@ module instr_register_test (tb_ifc io);  // interface port
     }
 
     cov_2: coverpoint vifc.cb.operand_b{
-      bins val_op_b[]={[0:7]};
+      bins val_op_b[]={[0:15]};
     }
 
     cov_3: coverpoint vifc.cb.operand_a{
@@ -102,6 +102,26 @@ module instr_register_test (tb_ifc io);  // interface port
       ignore_bins neg= binsof (cov_3.val_neg);
     }
 
+    cov_6: cross cov_0, cov_2, cov_3{
+      ignore_bins nega = binsof (cov_3.val_neg);
+      ignore_bins highThan0a = cov_6 with (cov_3 > 0);
+      ignore_bins highThan0b = cov_6 with (cov_2 > 0);
+    }
+
+    cov_7: cross cov_0, cov_1, cov_2{
+      ignore_bins lowerThanMaxa = cov_7 with (cov_1 < 15);
+      ignore_bins lowerThanMaxb = cov_7 with (cov_2 < 15);
+    }
+
+    cov_8: cross cov_0, cov_1, cov_2{
+      ignore_bins higherThanMina = cov_8 with (cov_1>-15);
+      ignore_bins higherThanMinb = cov_8 with (cov_2> 0);
+    }
+
+    cov_9: cross cov_0, cov_2{
+      ignore_bins notMod = !binsof (cov_0.val_mod);
+      ignore_bins highThan0b = cov_9 with (cov_2 > 0);
+    }
   endgroup;
     function new (virtual tb_ifc vifc);
       this.vifc = vifc;
@@ -143,7 +163,7 @@ module instr_register_test (tb_ifc io);  // interface port
        
        $display("\nWriting values to register stack...");
 			 @(vifc.cb) vifc.cb.load_en <= 1'b1;  // enable writing to register
-       repeat (5) begin
+       repeat (10) begin
        //Load
        @(vifc.cb)trans.randomize();
        assign_signals();
@@ -151,7 +171,7 @@ module instr_register_test (tb_ifc io);  // interface port
        inputs_measure.sample();
        end
        trans=trans_ext;
-       repeat (5) begin
+       repeat (10) begin
        //Load
        @(vifc.cb)trans.randomize();
        assign_signals();
